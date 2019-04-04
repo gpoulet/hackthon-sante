@@ -1,30 +1,35 @@
 import React, { useState } from "react";
 import { func } from "prop-types";
-import { Input } from "antd";
-import moment from "moment";
+import { List, InputItem } from "antd-mobile";
+import { createForm } from 'rc-form';
 
-function ParkourAdd({ add, match }) {
+function ParkourAdd({ add, match, form }) {
+  const { getFieldProps } = form;
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
   function onClick() {
-    add({ title, description, user: match.params.userId, events : [] });
+    add({ title: title.props.value, description: description.props.value, user: match.params.userId, events : [] });
   }
 
   return (
-    <div>
-      <Input
+    <List>
+      <InputItem
+        {...getFieldProps('title')}
+        clear
         placeholder="Titre"
-        value={title}
-        onChange={e => setTitle(e.target.value)}
+        ref={setTitle}
       />
-      <Input
-        placeholder="description"
-        value={description}
-        onChange={e => setDescription(e.target.value)}
+      <InputItem
+        {...getFieldProps('description')}
+        clear
+        placeholder="Description"
+        ref={setDescription}
       />
-      <button onClick={() => onClick()}>Ajouter</button>
-    </div>
+      <List.Item>
+        <button onClick={onClick}>Ajouter</button>
+      </List.Item>
+    </List>
   );
 }
 
@@ -32,4 +37,4 @@ ParkourAdd.propTypes = {
   add: func
 };
 
-export default ParkourAdd;
+export default createForm()(ParkourAdd);

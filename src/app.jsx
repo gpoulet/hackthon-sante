@@ -93,13 +93,11 @@ const App = () => {
           <Drawer
             className="my-drawer"
             style={{ minHeight: document.documentElement.clientHeight }}
-            //enableDragHandle
             contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
             sidebar={<Sidebar />}
             docked={isMenuVisible}
             open={isMenuVisible}
-          >
-          </Drawer>
+          > </Drawer>
           < WhiteSpace size="lg"/>
           <WingBlank>
             <Switch>
