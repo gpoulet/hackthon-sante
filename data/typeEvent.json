@@ -1,29 +1,29 @@
 [{
-    "id":"1",
+    "id":1,
     "type":"RDV",
     "label":"Rendez-Vous",
     "color":"blue",
     "icon" : ""
 },{
-    "id":"2",
+    "id":2,
     "type":"KINE",
     "label":"Séance Kiné",
     "color":"blue",
     "icon" : ""
 },{
-    "id":"3",
+    "id":3,
     "type":"RDVCARDIO",
     "label":"Rendez-Vous Cardiologie",
     "color":"red",
     "icon" : ""
 },{
-    "id":"4",
+    "id":4,
     "type":"OBSTETRIQUE",
     "label":"Rendez-Vous obstétrique",
     "color":"green",
     "icon" : ""
 },{
-    "id":"5",
+    "id":5,
     "type":"VACCIN",
     "label":"Vaccin",
     "color":"blue",
