@@ -21,6 +21,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
 import Users from "./components/Users";
+import { ROUTING_USERS } from "./constants";
 
 // Note: this API requires redux@>=3.1.0
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -61,7 +62,7 @@ const App = () => {
                     <Layout>
                         <Content>
                             <Route path="/" exact component={Index} />
-                            <Route path="/users"  component={Users} />
+                            <Route path={ROUTING_USERS}  component={Users} />
                         </Content>
                     </Layout>
                 </Layout>
