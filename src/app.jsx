@@ -39,6 +39,18 @@ const store = createStore(rootReducer(history), /* preloadedState, */ composeEnh
   applyMiddleware(thunk, routerMiddleware(history))
 ));
 
+
+const {
+  Header, Content,
+} = Layout;
+
+
+const Index = () => {
+  return (
+    <h1><FontAwesomeIcon icon="medkit"/> Index</h1>
+  );
+};
+
 const App = () => {
   const [ splash, setSplash ] = useState(true);
 
@@ -64,13 +76,26 @@ const App = () => {
             <Route path="/login" exact component={Login}/>
             <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
             <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
-            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>       
+            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
             <Route path={ROUTING_USERS} component={Users}/>
             <Route path={ROUTING_AGENDA} exact component={Agenda}/>
             <Redirect from="/" to="/login"/>
           </Switch>
         </WingBlank>
-                 
+        <NavBar mode="light"></NavBar>
+        <WhiteSpace size="lg" />
+        <WingBlank>
+          <Switch>
+            <Route path="/login" exact component={Login}/>
+            <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
+            <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
+            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
+            <Route path={ROUTING_USERS} component={Users}/>
+            <Route path={ROUTING_AGENDA} exact component={Agenda}/>
+            <Redirect from="/" to="/login"/>
+          </Switch>
+        </WingBlank>
+
       </Router>
       </ConnectedRouter>
     </Provider>
