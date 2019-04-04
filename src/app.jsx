@@ -64,13 +64,40 @@ const App = () => {
             <Route path="/login" exact component={Login}/>
             <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
             <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
-            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>       
+            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
             <Route path={ROUTING_USERS} component={Users}/>
             <Route path={ROUTING_AGENDA} exact component={Agenda}/>
             <Redirect from="/" to="/login"/>
           </Switch>
         </WingBlank>
-                 
+
+        <Layout>
+          <Header>
+            <Menu
+              theme="dark"
+              mode="horizontal"
+              defaultSelectedKeys={[ '2' ]}
+              style={{ lineHeight: '64px' }}
+            >
+              <Menu.Item key="1"><NavLink exact to={ROUTING_USERS}>Profils</NavLink></Menu.Item>
+              <Menu.Item key="2"><NavLink exact to={ROUTING_AGENDA}>Agenda</NavLink></Menu.Item>
+            </Menu>
+          </Header>
+          <Layout>
+            <Content>
+              <div style={{ background: '#ECECEC', padding: '30px' }}>
+                <Switch>
+                  <Route path="/login" exact component={Login}/>
+                  <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
+                  <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
+                  <Route path={ROUTING_USERS} component={Users}/>
+                  <Route path={ROUTING_AGENDA} exact component={Agenda}/>
+                  <Redirect from="/" to="/login"/>
+                </Switch>
+              </div>
+            </Content>
+          </Layout>
+        </Layout>
       </Router>
       </ConnectedRouter>
     </Provider>
