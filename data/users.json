@@ -1,0 +1,14 @@
+[{
+  "id": 1,
+  "firstName": "Maggie",
+  "lastName": "Simpson",
+  "photo": "baby.png",
+  "dateNaissance": "02/01/2019"
+},
+  {
+  "id": 2,
+  "firstName": "Marge",
+  "lastName": "Simpson",
+  "photo": "mother.png",
+  "dateNaissance": "04/07/1985"
+}]
