@@ -26,7 +26,8 @@ import Users from "./components/Users";
 import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
 import Parkours from "./components/Parkours";
-import { ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD } from "./constants";
+import ParkourAdd from "./components/Parkours/ParkourAdd.js";
+import { ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS} from "./constants";
 
 import history from './history';
 import Login from "./components/Login/Login";
@@ -63,11 +64,13 @@ const App = () => {
             <Route path="/login" exact component={Login}/>
             <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
             <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
+            <Route path={ROUTING_USERS + "/:userId"+ ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>       
             <Route path={ROUTING_USERS} component={Users}/>
             <Route path={ROUTING_AGENDA} exact component={Agenda}/>
             <Redirect from="/" to="/login"/>
           </Switch>
         </WingBlank>
+                 
       </Router>
       </ConnectedRouter>
     </Provider>
