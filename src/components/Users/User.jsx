@@ -12,10 +12,9 @@ function User ({ id, firstName, lastName, dateNaissance, photo }) {
         <WingBlank>
           <Card.Header title={firstName + " " + lastName}
                        thumb={ photo }
-                       thumbStyle={{ width:'30px' }}
+                       thumbStyle={{ height:'30px' }}
                        extra={<Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}>Choisir</Link>}/>
           <p>date naissance : {dateNaissance}</p>
-          <p>photo : {photo} </p>
         </WingBlank>
       </Card>
       <WhiteSpace size="lg" />
