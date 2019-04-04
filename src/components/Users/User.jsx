@@ -8,10 +8,6 @@ import { ROUTING_USERS } from '../../constants'
 function User ({ id, firstName, lastName, dateNaissance, photo }) {
   return (
     <div>
-      <Card title={firstName+" "+lastName} extra={<Link to={ROUTING_USERS+"/"+id} >Choisir</Link>}>
-        <p>id : { id }</p>
-        <p>date naissance : { dateNaissance }</p>
-        <p>photo :  {photo} </p>
       <Card>
         <WingBlank>
           <Card.Header title={firstName + " " + lastName}
