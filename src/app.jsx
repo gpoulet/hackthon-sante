@@ -107,7 +107,7 @@ const App = () => {
               <Route path="/login" exact component={Login}/>
               <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS} exact component={Parkours}/>
-              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkoursAdd}/>             
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS} component={Users}/>
               <Route path={ROUTING_AGENDA} exact component={Agenda}/>
               <Redirect from="/" to="/login"/>
