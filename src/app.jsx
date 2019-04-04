@@ -55,16 +55,6 @@ const data = [
   },
 ];
 
-const Sidebar = () => {
-    return data.map(
-      (item, index) => {
-        return <List.Item key={index}>
-          <Link to={item.link} >{item.label}</Link>
-        </List.Item>
-      }
-    )
-};
-
 const App = () => {
   const [ splash, setSplash ] = useState(true);
   const [ isMenuVisible, setIsMenuVisible ] = useState(false);
@@ -77,6 +67,16 @@ const App = () => {
       }, 1000);
     }
   }, [ splash ]);
+
+  const Sidebar = () => {
+    return data.map(
+      (item, index) => {
+        return <List.Item key={index}>
+          <Link to={item.link} onClick={() => setIsMenuVisible(!isMenuVisible)}>{item.label}</Link>
+        </List.Item>
+      }
+    )
+  };
 
   if (splash) return <Splash/>
 
@@ -99,7 +99,6 @@ const App = () => {
             docked={isMenuVisible}
             open={isMenuVisible}
           >
-
           </Drawer>
           < WhiteSpace size="lg"/>
           <WingBlank>

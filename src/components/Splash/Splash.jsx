@@ -5,8 +5,11 @@ const Splash = () =>
         <div style={{
             width: '100vw',
             height: '100vh',
-            backgroundColor: '#1890ff'
-        }}/>
+            backgroundColor: 'white',
+          display: 'flex'
+        }}>
+          <img src="/assets/images/logo.png" style={{margin: 'auto', width: '80%'}}/>
+        </div>
     );
 
 
