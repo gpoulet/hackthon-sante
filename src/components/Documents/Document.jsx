@@ -1,17 +1,13 @@
 import React from "react";
-import { Card } from 'antd';
-import { ROUTING_DOCUMENTS } from '../../constants'
+import { List } from "antd-mobile";
 
-function Document({name, eventId, date,id }) {
+const Item = List.Item;
+function Document({document }) {
   return (
-      <div>
-        <Card title={name} extra={<a href={ROUTING_DOCUMENTS+"/"+id}>Choisir</a>}>
-          <p>id : { id }</p>
-          <p>eventId : { eventId }</p>
-          <p>date :  {date} </p>
-        </Card>
-      </div>
-  )
+      <Item arrow="horizontal" multipleLine onClick={() => {}}>
+          {document.name}
+      </Item>
+  );
 }
 
 export default Document;

@@ -1,11 +1,20 @@
 import React from "react";
-import Document from "./Document";
+import Document from "./Document.jsx";
+
+import { Flex, WhiteSpace, Icon, List } from "antd-mobile";
+import Parkour from "../Parkours/Parkour";
+
+const Item = List.Item;
+const Brief = Item.Brief;
+
 function Documents({ documents }) {
   return (
-    <div>
-      { documents.map(document => <Document {...document} key={document.id} />) }
-    </div>
-  )
+      <List renderHeader={() => "documents"} className="my-list">
+        {documents.map(document => (
+            <Document key={document.id}  document={document} />
+        ))}
+      </List>
+  );
 }
 
 Users.defaultProps= {
