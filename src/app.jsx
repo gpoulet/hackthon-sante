@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
 
-import { Router, Route, Link, Switch } from "react-router-dom";
+import { Router, Route, NavLink, Switch } from "react-router-dom";
 
 import { Layout, Menu } from 'antd';
 
@@ -68,20 +68,19 @@ const App = () => {
               defaultSelectedKeys={['2']}
               style={{ lineHeight: '64px' }}
             >
-              <Menu.Item key="1"><Link to={ROUTING_USERS}>Profils</Link></Menu.Item>
-              <Menu.Item key="2"><Link to={ROUTING_AGENDA}>Agenda</Link></Menu.Item>
-              <Menu.Item key="3">nav 3</Menu.Item>
+              <Menu.Item key="1"><NavLink exact to={ROUTING_USERS}>Profils</NavLink></Menu.Item>
+              <Menu.Item key="2"><NavLink exact to={ROUTING_AGENDA}>Agenda</NavLink></Menu.Item>
             </Menu>
           </Header>
           <Layout>
             <Content>
               <div style={{ background: '#ECECEC', padding: '30px' }}>
                 <Switch>
-                  <Route path="/" exact component={Index}/>
                   <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
                   <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
                   <Route path={ROUTING_USERS} component={Users}/>
                   <Route path={ROUTING_AGENDA} exact component={Agenda}/>
+                  <Route path="/" exact component={Users}/>
                 </Switch>
               </div>
             </Content>
