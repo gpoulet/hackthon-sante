@@ -4,9 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-7",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "antd": "^3.16.1",
     "parcel-bundler": "^1.12.3",
-    "react": ">=15",
+    "react": "16.x",
     "react-dom": ">=16.0.0",
     "react-router-dom": "^5.0.0",
     "react-redux": "^6.0.1",

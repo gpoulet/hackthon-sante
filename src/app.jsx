@@ -7,6 +7,14 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { Layout, Menu } from 'antd';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo,faMedkit } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faIgloo)
+library.add(faMedkit)
+
+
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -29,7 +37,7 @@ const {
 
 const Index = () => {
     return (
-        <h1>Index</h1>
+        <h1><FontAwesomeIcon icon="medkit" /> Index</h1>
     );
 };
 
