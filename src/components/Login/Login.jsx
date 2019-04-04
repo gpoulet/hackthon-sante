@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { createForm } from 'rc-form';
 import { InputItem, List } from 'antd-mobile';
 
+import history from "../../history";
+import { ROUTING_USERS } from "../../constants";
+
 const Login = (props) => {
   const { getFieldProps } = props.form;
   const [ username, setUsername ] = useState("")
@@ -12,7 +15,7 @@ const Login = (props) => {
     props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        window.location.pathname = "/users"
+        history.push(ROUTING_USERS+"/")
       }
     });
   };

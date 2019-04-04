@@ -19,7 +19,6 @@
     "history": "^4.7.2",
     "moment": "2.24.0",
     "multiparty": "^4.2.1",
-    "parcel-bundler": "^1.12.3",
     "prop-types": "^15.0.0 || ^16.0.0",
     "react": "^16.4.0",
     "react-dom": ">=16.0.0",

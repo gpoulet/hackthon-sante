@@ -24,6 +24,7 @@ import Users from "./components/Users";
 import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
 import Parkours from "./components/Parkours";
+import Timeline from "./components/Timeline";
 import ParkourAdd from "./components/Parkours/ParkourAdd.js";
 import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DOCUMENTS} from "./constants";
 
@@ -94,13 +95,11 @@ const App = () => {
           <Drawer
             className="my-drawer"
             style={{ minHeight: document.documentElement.clientHeight }}
-            //enableDragHandle
             contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
             sidebar={<Sidebar />}
             docked={isMenuVisible}
             open={isMenuVisible}
-          >
-          </Drawer>
+          > </Drawer>
           < WhiteSpace size="lg"/>
           <WingBlank>
             <Switch>
@@ -108,6 +107,7 @@ const App = () => {
               <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS} exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
               <Route path={ROUTING_USERS} component={Users}/>
