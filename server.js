@@ -16,8 +16,8 @@ function serveIndex(req, res) {
   if (!view) {
     view = fs.readFileSync(filePath).toString('utf8');
   }
-  view = view.replace('$cssurl', mode === 'prod' ? '/dist/mount.min.css' : 'http://localhost:8080/dist/mount.css');
-  view = view.replace('$jsurl', mode === 'prod' ? '/dist/mount.min.js' : 'http://localhost:8080/dist/mount.js');
+  view = view.replace('$cssurl', mode === 'prod' ? '/dist/mount.min.css' : 'http://localhost:3000/mount.css');
+  view = view.replace('$jsurl', mode === 'prod' ? '/dist/mount.min.js' : 'http://localhost:3000/mount.js');
   res.type('html').send(view);
 }
 
