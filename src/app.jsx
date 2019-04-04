@@ -5,10 +5,11 @@ import { Provider } from 'react-redux'
 
 import { Router, Route, NavLink, Switch, Redirect } from "react-router-dom";
 
-import { Layout, Menu } from 'antd';
+import { WingBlank, NavBar, Icon, WhiteSpace, Popover } from 'antd-mobile';
+
+const Item = Popover.Item;
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIgloo, faMedkit } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faIgloo)
@@ -37,18 +38,6 @@ const store = createStore(rootReducer(history), /* preloadedState, */ composeEnh
   applyMiddleware(thunk, routerMiddleware(history))
 ));
 
-
-const {
-  Header, Content,
-} = Layout;
-
-
-const Index = () => {
-  return (
-    <h1><FontAwesomeIcon icon="medkit"/> Index</h1>
-  );
-};
-
 const App = () => {
   const [ splash, setSplash ] = useState(true);
 
@@ -67,33 +56,18 @@ const App = () => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
       <Router history={history}>
-        <Layout>
-          <Header>
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={[ '2' ]}
-              style={{ lineHeight: '64px' }}
-            >
-              <Menu.Item key="1"><NavLink exact to={ROUTING_USERS}>Profils</NavLink></Menu.Item>
-              <Menu.Item key="2"><NavLink exact to={ROUTING_AGENDA}>Agenda</NavLink></Menu.Item>
-            </Menu>
-          </Header>
-          <Layout>
-            <Content>
-              <div style={{ background: '#ECECEC', padding: '30px' }}>
-                <Switch>
-                  <Route path="/login" exact component={Login}/>
-                  <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
-                  <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
-                  <Route path={ROUTING_USERS} component={Users}/>
-                  <Route path={ROUTING_AGENDA} exact component={Agenda}/>
-                  <Redirect from="/" to="/login"/>
-                </Switch>
-              </div>
-            </Content>
-          </Layout>
-        </Layout>
+        <NavBar mode="light"></NavBar>
+        <WhiteSpace size="lg" />
+        <WingBlank>
+          <Switch>
+            <Route path="/login" exact component={Login}/>
+            <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
+            <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
+            <Route path={ROUTING_USERS} component={Users}/>
+            <Route path={ROUTING_AGENDA} exact component={Agenda}/>
+            <Redirect from="/" to="/login"/>
+          </Switch>
+        </WingBlank>
       </Router>
       </ConnectedRouter>
     </Provider>
