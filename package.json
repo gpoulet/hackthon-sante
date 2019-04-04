@@ -8,62 +8,25 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "antd": "^3.16.1",
-    "antd-mobile": "^2.2.11",
     "aws-sdk": "^2.435.0",
     "bluebird": "^3.5.4",
-    "body-parser": "1.18.3",
-    "express": "4.16.4",
     "connected-react-router": "^6.3.2",
     "file-type": "^10.10.0",
     "fs": "^0.0.1-security",
-    "moment": "2.24.0",
-    "history": "^4.7.2",
     "multiparty": "^4.2.1",
-    "prop-types": "^15.0.0 || ^16.0.0",
-    "react": "^16.4.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "16.x",
     "react-dom": ">=16.0.0",
-    "react-redux": "^6.0.0",
-    "react-router": "^4.3.1",
+    "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
-    "redux": "^3.6.0 || ^4.0.0",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "uuid": "^3.3.2",
-    "whatwg-fetch": "3.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "7.4.3",
-    "@babel/preset-react": "^7.0.0",
-    "less": "^3.9.0",
-    "nodemon": "1.18.10",
-    "parcel-bundler": "1.12.3",
-    "prettier": "1.16.4"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-proposal-class-properties",
-        {
-          "loose": false
-        }
-      ]
-    ]
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "src/client/**"
-    ]
+    "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "MODE=prod node server.js",
-    "build": "parcel build mount.js --out-file mount.min.js",
-    "start-client": "parcel serve mount.js -p 3000 --out-file mount.js",
-    "start-server": "MODE=dev nodemon server.js ",
-    "prettier": "prettier --write --single-quote --trailing-comma es5 --print-width 100 --tab-width 2 --jsx-bracket-same-line \"**/*.js\""
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "less": "^3.9.0"
   }
 }
