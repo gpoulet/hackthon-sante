@@ -5,19 +5,12 @@
     "user":1,
     "events": [
       { "id": "df3b02d0-9eb3-4bfd-97a5-5e92aee98c93", "title": "Déclaration de naissance à la mairie", "date": "20190103" },
+      { "id": "b10a1865-9bff-47d3-a9de-21ea42d5fb9e", "title": "Examen 1 postnatale sage-femme", "date": "20190111" },
       { "id": "32e752d1-794b-4641-8acf-4e34a741762a", "title": "Déclaration rattachement à la Caisse d’Assurance Maladie", "date": "20190104" },
-      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Rendez-vous pédiatre ou médecin", "date": "20190203" }
-      { "id": "b10a1865-9bff-47d3-a9de-21ea42d5fb9e", "title": "Rendez-vouz consultation postnatale sage-femme", "date": "20190111" }
-    ]
-  },
-  {
-    "id": "7e7f9f39-a16a-49fc-b8dd-ae278200b583",
-    "title": "mon deuxieme parcours enfant",
-    "user":2,
-    "events": [
-      { "id": "defdd261-746a-459e-9316-68ca476702fc", "title": "mon titre d'event", "date": "20190102" },
-      { "id": "6b556f5e-c656-4b5f-bcaa-e9c3591a09ac", "title": "mon titre d'event 2", "date": "20190103" },
-      { "id": "a660290f-1ae9-4f2e-8936-13eb0353149c", "title": "mon titre d'event 2", "date": "20190103" }
+      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Rendez-vous Examen 2 pédiatre ou médecin", "date": "20190203" },
+      { "id": "6b556f5e-c656-4b5f-bcaa-e9c3591a09ac", "title": "Rendez-vous Examen 3 pédiatre ou médecin", "date": "20190303" },
+      { "id": "a660290f-1ae9-4f2e-8936-13eb0353149c", "title": "Rendez-vous Examen 4 pédiatre ou médecin", "date": "20190403" },
+      { "id": "defdd261-746a-459e-9316-68ca476702fc", "title": "Rendez-vous Examen 5 pédiatre ou médecin", "date": "20190502" }
     ]
   },
   {
@@ -26,7 +19,7 @@
     "user":2,
     "events": [
       { "id": "97c30763-9943-4071-91e6-4f45cff3809c", "title": "mon titre d'event", "date": "20190102" },
-      { "id": "a6ff58aa-8d05-4c74-bbc2-dc3fa43e53bb", "title": "mon titre d'event 2", "date": "20190103" },
+      { "id": "a6ff58aa-8d05-4c74-bbc2-dc3fa43e53bb", "title": "mon titre d'event 2", "date": "20190103" }
     ]
   },
   {
