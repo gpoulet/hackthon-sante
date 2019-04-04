@@ -2,8 +2,8 @@ import { connect } from "react-redux"
 import Timeline from "./Timeline.jsx"
 import { getParkoursByParkoursId } from "../../store/parkours"
 
-const mapStateToProps = (state, { match }) => {
-  const parkoursId = match.params.parkoursId;
+const mapStateToProps = (state, props) => {
+  const parkoursId = props.match.params.parkoursId;
   return {
     timeline: getParkoursByParkoursId(state, parkoursId)
   }
