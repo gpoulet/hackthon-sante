@@ -2,13 +2,13 @@
   "id": "3e728741-e4e7-4118-af06-f5ccc255b4be",
   "firstName": "Maggie",
   "lastName": "Simpson",
-  "photo": "baby.png",
+  "photo": "/assets/images/avatar/maggie.png",
   "dateNaissance": "02/01/2019"
 },
   {
   "id":"14b861fb-2c41-4e37-a205-aa790f1a5701",
   "firstName": "Marge",
   "lastName": "Simpson",
-  "photo": "mother.png",
+  "photo": "/assets/images/avatar/marge.png",
   "dateNaissance": "04/07/1985"
 }]

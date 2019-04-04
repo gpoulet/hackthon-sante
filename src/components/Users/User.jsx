@@ -11,7 +11,8 @@ function User ({ id, firstName, lastName, dateNaissance, photo }) {
       <Card>
         <WingBlank>
           <Card.Header title={firstName + " " + lastName}
-                       thumb="https://gw.alipayobjects.com/zos/rmsportal/MRhHctKOineMbKAZslML.jpg"
+                       thumb={ photo }
+                       thumbStyle={{ width:'30px' }}
                        extra={<Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}>Choisir</Link>}/>
           <p>date naissance : {dateNaissance}</p>
           <p>photo : {photo} </p>
