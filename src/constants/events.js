@@ -1,7 +1,16 @@
-export const getColorFromType = type => {
-  switch(type) {
-    case "RDV": return "blue"
-    case "VACCIN": return "blue"
-    case "RDV": return "blue"
+import moment from "moment";
+
+export const getColorFromType = (type, date) => {
+  if(moment(date, "YYYYMMDD").isAfter(moment())) {
+    return "grey";
+  }
+
+  switch (type) {
+    case "VACCIN":
+      return "red"
+    case "SAGEFEMME":
+      return "pink"
+    default:
+      return "blue"
   }
 }
