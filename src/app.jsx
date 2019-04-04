@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
@@ -13,6 +13,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
 import Users from "./components/Users";
+import Splash from "./components/Splash";
 
 // Note: this API requires redux@>=3.1.0
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -34,6 +35,17 @@ const Index = () => {
 };
 
 const App = () => {
+
+    const [splash, setSplash] = useState(true);
+
+    if (splash) {
+        const timer = setInterval(() => {
+            setSplash(false);
+            clearInterval(timer);
+        }, 1000);
+        return <Splash/>
+    }
+
     return (
       <Provider store={store}>
           <Router>
