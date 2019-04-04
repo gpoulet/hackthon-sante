@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
 
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Router, Route, Link, Switch } from "react-router-dom";
 
 import { Layout, Menu } from 'antd';
 
@@ -19,10 +19,15 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
+import Agenda from './components/Agenda/Agenda'
 import Users from "./components/Users";
+import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
 import Parkours from "./components/Parkours";
-import { ROUTING_USERS } from "./constants";
+import { ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD } from "./constants";
+
+import history from './history';
+
 
 // Note: this API requires redux@>=3.1.0
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -54,7 +59,7 @@ const App = () => {
     }
   return (
     <Provider store={store}>
-      <Router>
+      <Router history={history}>
         <Layout>
           <Header>
             <Menu
@@ -63,8 +68,8 @@ const App = () => {
               defaultSelectedKeys={['2']}
               style={{ lineHeight: '64px' }}
             >
-              <Menu.Item key="1">nav 1</Menu.Item>
-              <Menu.Item key="2">nav 2</Menu.Item>
+              <Menu.Item key="1"><Link to={ROUTING_USERS}>Profils</Link></Menu.Item>
+              <Menu.Item key="2"><Link to={ROUTING_AGENDA}>Agenda</Link></Menu.Item>
               <Menu.Item key="3">nav 3</Menu.Item>
             </Menu>
           </Header>
@@ -73,8 +78,10 @@ const App = () => {
               <div style={{ background: '#ECECEC', padding: '30px' }}>
                 <Switch>
                   <Route path="/" exact component={Index}/>
+                  <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
                   <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
                   <Route path={ROUTING_USERS} component={Users}/>
+                  <Route path={ROUTING_AGENDA} exact component={Agenda}/>
                 </Switch>
               </div>
             </Content>
