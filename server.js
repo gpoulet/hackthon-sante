@@ -34,6 +34,7 @@ app.use('/assets', express.static('assets'));
 app.use('/dist', express.static('dist'));
 app.get('/', serveIndex);
 app.get('/index.html', serveIndex);
+app.get('/*', serveIndex);
 
 app.options('/*', (req, res) => {
   res.set('Access-Control-Allow-Origin', '*');

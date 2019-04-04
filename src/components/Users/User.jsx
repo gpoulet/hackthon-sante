@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from 'antd';
+import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 
 import { Link } from 'react-router-dom';
 
