@@ -3,7 +3,7 @@ import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 
 import { Link } from 'react-router-dom';
 
-import { ROUTING_USERS } from '../../constants'
+import { ROUTING_PARKOURS, ROUTING_USERS } from '../../constants'
 
 function User ({ id, firstName, lastName, dateNaissance, photo }) {
   return (
@@ -12,7 +12,7 @@ function User ({ id, firstName, lastName, dateNaissance, photo }) {
         <WingBlank>
           <Card.Header title={firstName + " " + lastName}
                        thumb="https://gw.alipayobjects.com/zos/rmsportal/MRhHctKOineMbKAZslML.jpg"
-                       extra={<Link to={ROUTING_USERS + "/" + id}>Choisir</Link>}/>
+                       extra={<Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}>Choisir</Link>}/>
           <p>date naissance : {dateNaissance}</p>
           <p>photo : {photo} </p>
         </WingBlank>
