@@ -14,6 +14,7 @@ import { faIgloo, faMedkit } from '@fortawesome/free-solid-svg-icons'
 library.add(faIgloo)
 library.add(faMedkit)
 
+import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
@@ -32,8 +33,8 @@ import Login from "./components/Login/Login";
 
 // Note: this API requires redux@>=3.1.0
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, /* preloadedState, */ composeEnhancers(
-  applyMiddleware(thunk)
+const store = createStore(rootReducer(history), /* preloadedState, */ composeEnhancers(
+  applyMiddleware(thunk, routerMiddleware(history))
 ));
 
 
@@ -64,6 +65,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <ConnectedRouter history={history}>
       <Router history={history}>
         <Layout>
           <Header>
@@ -93,6 +95,7 @@ const App = () => {
           </Layout>
         </Layout>
       </Router>
+      </ConnectedRouter>
     </Provider>
   )
 };
