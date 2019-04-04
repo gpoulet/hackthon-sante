@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
 
-import { Router, Route, NavLink, Switch } from "react-router-dom";
+import { Router, Route, NavLink, Switch, Redirect } from "react-router-dom";
 
 import { Layout, Menu } from 'antd';
 
@@ -27,6 +27,7 @@ import Parkours from "./components/Parkours";
 import { ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD } from "./constants";
 
 import history from './history';
+import Login from "./components/Login/Login";
 
 
 // Note: this API requires redux@>=3.1.0
@@ -48,15 +49,19 @@ const Index = () => {
 };
 
 const App = () => {
-    const [splash, setSplash] = useState(true);
+  const [ splash, setSplash ] = useState(true);
 
+  useEffect(() => {
     if (splash) {
-        const timer = setInterval(() => {
-            setSplash(false);
-            clearInterval(timer);
-        }, 1000);
-        return <Splash/>
+      const timer = setInterval(() => {
+        setSplash(false);
+        clearInterval(timer);
+      }, 1000);
     }
+  }, [splash]);
+
+  if (splash) return <Splash/>
+
   return (
     <Provider store={store}>
       <Router history={history}>
@@ -65,7 +70,7 @@ const App = () => {
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={['2']}
+              defaultSelectedKeys={[ '2' ]}
               style={{ lineHeight: '64px' }}
             >
               <Menu.Item key="1"><NavLink exact to={ROUTING_USERS}>Profils</NavLink></Menu.Item>
@@ -76,11 +81,12 @@ const App = () => {
             <Content>
               <div style={{ background: '#ECECEC', padding: '30px' }}>
                 <Switch>
+                  <Route path="/login" exact component={Login}/>
                   <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
                   <Route path={ROUTING_USERS + "/:userId"} exact component={Parkours}/>
                   <Route path={ROUTING_USERS} component={Users}/>
                   <Route path={ROUTING_AGENDA} exact component={Agenda}/>
-                  <Route path="/" exact component={Users}/>
+                  <Redirect from="/" to="/login"/>
                 </Switch>
               </div>
             </Content>
