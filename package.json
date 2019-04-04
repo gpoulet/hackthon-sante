@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "antd": "^3.16.1",
     "parcel-bundler": "^1.12.3",
-    "react": "16.x",
+    "react": "^16.4.0-0",
     "react-dom": ">=16.0.0",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",

@@ -21,6 +21,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
 import Users from "./components/Users";
+import Parkours from "./components/Parkours";
 import { ROUTING_USERS } from "./constants";
 
 // Note: this API requires redux@>=3.1.0
@@ -63,6 +64,7 @@ const App = () => {
                         <Content>
                             <Route path="/" exact component={Index} />
                             <Route path={ROUTING_USERS}  component={Users} />
+                            <Route path={ROUTING_USERS+"/:userId"}  component={Parkours} />
                         </Content>
                     </Layout>
                 </Layout>
