@@ -10,7 +10,7 @@ function Users ({ users }) {
   return (
     <div>
       {users.map(user => <User {...user} key={user.id}/>)}
-      <Button type="primary" onClick={() => history.push(ROUTING_USERS + ROUTING_ADD)}><Icon type="user-add" /> Ajouter</Button>
+      <Button type="primary" onClick={() => history.push(ROUTING_USERS + ROUTING_ADD)}><Icon type="user-add" />&nbsp;&nbsp;Ajouter</Button>
     </div>
   )
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import { object, string } from "prop-types"
 import { Timeline } from 'antd';
-import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
+import { Card, WingBlank, WhiteSpace, Button } from 'antd-mobile';
+import { Icon } from "antd";
 import TimelineItem from './TimelineItem'
 
 function TimelinePage({ timeline, parkoursId }) {
   const { title, events } = timeline;
   return (
+    <div>
     <WingBlank size="lg">
       <WhiteSpace size="lg"/>
       <Card>
@@ -19,7 +21,10 @@ function TimelinePage({ timeline, parkoursId }) {
           </Timeline>
         </Card.Body>
       </Card>
-    </WingBlank>);
+    </WingBlank>
+      <br/>
+      <Button type="primary"><Icon type="plus" />&nbsp;&nbsp;Ajouter</Button>
+    </div>);
 }
 
 TimelinePage.propTypes = {
