@@ -24,7 +24,10 @@ function Document ({ document,userId }) {
             <Card>
                 <WingBlank>
                     <Card.Header title={document.name }
-                                 thumb={<div className="user-avatar"><Avatar size="large" src={document.file}/></div>}
+                                 thumb={
+                                     <a href={document.file} target="_blank" rel="noreferrer noopener">
+
+                                         <div className="user-avatar"><Avatar size="large" src={document.file}/></div> </a>}
                                  thumbStyle={{ height: '30px' }} />
                     <Extra />
                     <WhiteSpace size="lg"/>
