@@ -40,12 +40,11 @@ function Agenda({ parkours, users }) {
             <Item
               arrow="horizontal"
               multipleLine
-
               key={event.id}
             >
-              {moment(event.date).format("Do MMMM YYYY")}
+              <Icon type="clock-circle"/>&nbsp;&nbsp;{moment(event.date).format("Do MMMM YYYY")} -  {event.user.lastName + " " + event.user.firstName}
               <Brief>
-                {event.title} <br/> {event.user.lastName + " " + event.user.firstName}
+                {event.title}
               </Brief>
             </Item>
           </a>
