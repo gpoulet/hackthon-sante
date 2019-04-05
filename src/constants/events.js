@@ -14,3 +14,11 @@ export const getColorFromType = (type = "", date) => {
       return "blue"
   }
 }
+
+export const getColorFromDate = (date) => {
+  if(moment(date, "YYYYMMDD").isAfter(moment())) {
+    return "#aaa";
+  }
+
+  return "#000000";
+}
