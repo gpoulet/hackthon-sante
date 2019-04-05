@@ -1,6 +1,6 @@
 import moment from "moment";
 
-export const getColorFromType = (type, date) => {
+export const getColorFromType = (type = "", date) => {
   if(moment(date, "YYYYMMDD").isAfter(moment())) {
     return "grey";
   }
