@@ -7,8 +7,8 @@
       { "id": "df3b02d0-9eb3-4bfd-97a5-5e92aee98c93", "title": "Déclaration de naissance à la mairie", "date": "20190103" },
       { "id": "32e752d1-794b-4641-8acf-4e34a741762a", "title": "Déclaration rattachement à la Caisse d’Assurance Maladie", "date": "20190104" },
       { "id": "b10a1865-9bff-47d3-a9de-21ea42d5fb9e", "title": "Rendez-vous Examen 1 postnatale pédiatre ou sage-femme", "date": "20190111" },
-      { "id": "a6ff58aa-8d05-4c74-bbc2-dc3fa43e53bb", "title": "Vaccins BCG", "date": "20190203" },
-      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Examen 2 pédiatre ou médecin + vaccins", "date": "20190203" },
+      { "id": "a6ff58aa-8d05-4c74-bbc2-dc3fa43e53bb", "title": "Vaccins BCG", "date": "20190203", "type": "VACCIN" },
+      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Examen 2 pédiatre ou médecin + vaccins", "type": "VACCIN", "date": "20190203" },
       { "id": "6b556f5e-c656-4b5f-bcaa-e9c3591a09ac", "title": "Rendez-vous Examen 3 pédiatre ou médecin", "date": "20190303" },
       { "id": "a660290f-1ae9-4f2e-8936-13eb0353149c", "title": "Rendez-vous Examen 4 pédiatre ou médecin", "date": "20190403" },
       { "id": "defdd261-746a-459e-9316-68ca476702fc", "title": "Rendez-vous Examen 5 pédiatre ou médecin", "date": "20190503" },
@@ -20,9 +20,9 @@
     "title": "Post Accouchement",
     "user":"14b861fb-2c41-4e37-a205-aa790f1a5701",
     "events": [
-      { "id": "85a1875e-4159-4673-9fea-a25694c7be49", "title": "Contrôle Sage femme ou Médecin", "date": "20190203" },
+      { "id": "85a1875e-4159-4673-9fea-a25694c7be49", "title": "Contrôle Sage femme ou Médecin", "type": "SAGEFEMME", "date": "20190203" },
       { "id": "b7215283-61c5-40a3-bbc0-77ddf10ace9c", "title": "Réducation périnitale", "date": "20190203" },
-      { "id": "8bccfd8d-be63-4248-9f78-0c026967c905", "title": "Contrôle Sage femme ou gynéco", "date": "20190211" }
+      { "id": "8bccfd8d-be63-4248-9f78-0c026967c905", "title": "Contrôle Sage femme ou gynéco", "type": "SAGEFEMME", "date": "20190211" }
     ]
   },
   {
@@ -30,9 +30,9 @@
     "title": "Suivi Grossesse",
     "user":"14b861fb-2c41-4e37-a205-aa790f1a5701",
     "events": [
-      { "id": "19580e9a-8d16-4e28-adfb-9638d541222a", "title": "mon titre d'event", "date": "20180602" },
-      { "id": "b00014ae-4748-4c65-b86d-f518f174fae6", "title": "mon titre d'event 2", "date": "20180503" },
-      { "id": "4e489b57-2839-4f53-bba9-ce3c81cf1dd4", "title": "mon titre d'event 2", "date": "20180403" }
+      { "id": "19580e9a-8d16-4e28-adfb-9638d541222a", "title": "Rendez-vous 3eme échographie", "date": "20180602" },
+      { "id": "b00014ae-4748-4c65-b86d-f518f174fae6", "title": "Rendez-vous 2eme échographie", "date": "20180503" },
+      { "id": "4e489b57-2839-4f53-bba9-ce3c81cf1dd4", "title": "Rendez-vous 1er échographie", "date": "20180403" }
     ]
   }
 ]

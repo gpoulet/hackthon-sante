@@ -4,7 +4,7 @@ import Parkour from "./Parkour";
 import { List } from "antd-mobile";
 import { Icon } from "antd";
 import { Link } from "react-router-dom";
-import { ROUTING_ADD, ROUTING_PARKOURS, ROUTING_USERS } from "../../constants";
+import { ROUTING_ADD, ROUTING_PARKOURS, ROUTING_USERS,ROUTING_DOCUMENTS } from "../../constants";
 
 function Parkours ({ parkours, user, match }) {
   return (

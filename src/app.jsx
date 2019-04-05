@@ -27,10 +27,12 @@ import Splash from "./components/Splash";
 import Parkours from "./components/Parkours";
 import Timeline from "./components/Timeline";
 import ParkourAdd from "./components/Parkours/ParkourAdd.js";
-import { ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS} from "./constants";
+import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DOCUMENTS} from "./constants";
 
 import history from './history';
 import Login from "./components/Login/Login";
+import Documents from "./components/Documents/Documents";
+import DocumentAdd from "./components/Documents/DocumentAdd";
 
 
 // Note: this API requires redux@>=3.1.0
@@ -50,11 +52,7 @@ const data = [
     label: 'Agenda',
     link: '/agenda'
   },
-  {
-    value: '4',
-    label: 'Documents',
-    link: '/documents'
-  },
+
 ];
 
 const App = () => {
@@ -108,6 +106,8 @@ const App = () => {
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS} exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
               <Route path={ROUTING_USERS} component={Users}/>
               <Route path={ROUTING_AGENDA} exact component={Agenda}/>
               <Redirect from="/" to="/login"/>
