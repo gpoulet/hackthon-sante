@@ -8,10 +8,11 @@ import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import { WingBlank, NavBar, WhiteSpace, Icon, Drawer, List } from 'antd-mobile';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faIgloo, faMedkit } from '@fortawesome/free-solid-svg-icons'
+import { faIgloo, faMedkit, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faIgloo)
 library.add(faMedkit)
+library.add(faUserPlus)
 
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
 
@@ -19,7 +20,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
-import Agenda from './components/Agenda/Agenda'
+import Agenda from './components/Agenda'
 import Users from "./components/Users";
 import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
@@ -30,7 +31,7 @@ import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DO
 
 import history from './history';
 import Login from "./components/Login/Login";
-import Documents from "./components/Documents/Documents";
+import Documents from "./components/Documents";
 import DocumentAdd from "./components/Documents/DocumentAdd";
 
 
@@ -102,9 +103,9 @@ const App = () => {
             <Switch>
               <Route path="/login" exact component={Login}/>
               <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
-              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS} exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS } exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
               <Route path={ROUTING_USERS} component={Users}/>

@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "less": "^3.9.0",
     "nodemon": "1.18.10",
@@ -63,7 +63,7 @@
     "start": "MODE=prod node server.js",
     "build": "parcel build mount.js --out-file mount.min.js",
     "start-client": "parcel serve mount.js -p 3000 --out-file mount.js",
-    "start-server": "MODE=dev nodemon server.js ",
+    "start-server": "set MODE=dev && nodemon server.js ",
     "prettier": "prettier --write --single-quote --trailing-comma es5 --print-width 100 --tab-width 2 --jsx-bracket-same-line \"**/*.js\""
   }
 }

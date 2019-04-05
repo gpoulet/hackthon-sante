@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { createForm } from 'rc-form';
-import { InputItem, List } from 'antd-mobile';
+import { InputItem, List, Flex } from 'antd-mobile';
 
 import history from "../../history";
 import { ROUTING_USERS } from "../../constants";
@@ -15,34 +15,41 @@ const Login = (props) => {
     props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        history.push(ROUTING_USERS+"/")
+        history.push(ROUTING_USERS + "/")
       }
     });
   };
 
   return (
-    <List>
-      <InputItem
-        {...getFieldProps('username')}
-        clear
-        placeholder="Username"
-        ref={setUsername}
-      ></InputItem>
-      <InputItem
-        {...getFieldProps('password')}
-        clear
-        placeholder="Password"
-        ref={setPassword}
-      ></InputItem>
-      <List.Item>
-        <div
-          style={{ width: '100%', color: '#108ee9', textAlign: 'center' }}
-          onClick={handleSubmit}
-        >
-          Login
-        </div>
-      </List.Item>
-    </List>
+    <Flex direction="column">
+      <Flex.Item>
+        <h1>Identification</h1>
+      </Flex.Item>
+      <Flex.Item style={{ width: '80%'}}>
+        <List>
+          <InputItem
+            {...getFieldProps('username')}
+            clear
+            placeholder="Identifiant"
+            ref={setUsername}
+          ></InputItem>
+          <InputItem
+            {...getFieldProps('password')}
+            clear
+            placeholder="Mot de passe"
+            ref={setPassword}
+          ></InputItem>
+          <List.Item>
+            <div
+              style={{ width: '100%', color: '#108ee9', textAlign: 'center' }}
+              onClick={handleSubmit}
+            >
+              Connexion
+            </div>
+          </List.Item>
+        </List>
+      </Flex.Item>
+    </Flex>
   );
 };
 
