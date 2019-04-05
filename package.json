@@ -63,7 +63,7 @@
     "start": "MODE=prod node server.js",
     "build": "parcel build mount.js --out-file mount.min.js",
     "start-client": "parcel serve mount.js -p 3000 --out-file mount.js",
-    "start-server": "MODE=dev nodemon server.js ",
+    "start-server": "set MODE=dev && nodemon server.js ",
     "prettier": "prettier --write --single-quote --trailing-comma es5 --print-width 100 --tab-width 2 --jsx-bracket-same-line \"**/*.js\""
   }
 }
