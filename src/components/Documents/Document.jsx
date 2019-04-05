@@ -1,13 +1,19 @@
 import React from "react";
-import { List } from "antd-mobile";
+import {List} from "antd-mobile";
+import {ROUTING_DOCUMENTS} from "../../constants";
 
 const Item = List.Item;
-function Document({document }) {
-  return (
-      <Item arrow="horizontal" multipleLine onClick={() => {}}>
-          {document.name}
-      </Item>
-  );
+
+function Document({document, userId}) {
+    return (
+        <Link to={ROUTING_USERS + '/' + userId + ROUTING_DOCUMENTS + '/' + document.id}>
+
+            <Item arrow="horizontal" multipleLine onClick={() => {
+            }}>
+                {document.name}
+            </Item>
+        </Link>
+    );
 }
 
 export default Document;

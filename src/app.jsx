@@ -31,6 +31,7 @@ import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DO
 import history from './history';
 import Login from "./components/Login/Login";
 import Documents from "./components/Documents/Documents";
+import DocumentAdd from "./components/Documents/DocumentAdd";
 
 
 // Note: this API requires redux@>=3.1.0
@@ -52,9 +53,10 @@ const data = [
   },
   {
     value: '4',
-    label: 'Documents',
-    link: '/documents'
+    label: 'Document',
+    link: '/document'
   },
+
 ];
 
 const App = () => {

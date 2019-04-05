@@ -21,6 +21,7 @@ function serveIndex(req, res) {
   res.type('html').send(view);
 }
 
+
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {

@@ -1,24 +1,27 @@
 import React from "react";
-import Document from "./Document.jsx";
 
-import { Flex, WhiteSpace, Icon, List } from "antd-mobile";
-import Parkour from "../Parkours/Parkour";
+import Document from "./Document";
+import { Icon, List } from "antd-mobile";
+import { Link } from "react-router-dom";
+import { ROUTING_ADD, ROUTING_DOCUMENTS, ROUTING_USERS } from "../../constants";
 
-const Item = List.Item;
-const Brief = Item.Brief;
-
-function Documents({ documents }) {
-  return (
-      <List renderHeader={() => "documents"} className="my-list">
-        {documents.map(document => (
-            <Document key={document.id}  document={document} />
-        ))}
-      </List>
-  );
+function Documents({ documents, match }) {
+    return (
+        <List renderHeader={() => "document"} className="my-list">
+            <Link to={ROUTING_USERS + "/"+ match.params.userId + ROUTING_DOCUMENTS}>
+                <List.Item>
+                    <Icon type="check-circle-o"/> Ajouter un Document
+                </List.Item>
+            </Link>
+            {documents.map(document => (
+                <Document key={document.id}  document={document} userId={match.params.userId} />
+            ))}
+        </List>
+    );
 }
 
-Users.defaultProps= {
-  documents: []
-}
+Documents.defaultProps = {
+    documents: []
+};
 
 export default Documents;
