@@ -119,6 +119,20 @@ const App = () => {
   )
 };
 
+Notification.requestPermission().then(status => {
+  console.log(status); // les notifications ne seront affichées que si "autorisées"
+});
+
+setTimeout(() => {
+  let n = new Notification("Rendez-vous médecin Marge Simpson", {
+    body: "Prendre un rendez-vous le 12 Avril chez le médecin généraliste pour Marge Simpson",
+    icon: "assets/images/logo.png",
+  }); // this also shows the notification
+  n.onshow = function () {
+    setTimeout(n.close.bind(n), 5000);
+  }
+}, 9000);
+
 export const mount = (id) => {
   ReactDOM.render(
     <App/>,
