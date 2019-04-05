@@ -1,7 +1,7 @@
 import React from "react";
 import history from "../../history";
 import { List } from "antd-mobile";
-import {Icon } from "antd";
+import { Icon } from "antd";
 import moment from "moment";
 import { ROUTING_USERS, ROUTING_PARKOURS } from "../../constants";
 
@@ -10,7 +10,7 @@ const Brief = Item.Brief;
 import 'moment/locale/fr'  // without this line it didn't work
 moment.locale('fr')
 
-const getEvent = (parkours,users) => {
+const getEvent = (parkours, users) => {
   return parkours
     .flatMap(parkour =>
       parkour.events.map(event => ({
@@ -25,28 +25,30 @@ const getEvent = (parkours,users) => {
 function Agenda({ parkours, users }) {
   return (
     <div>
-      <List renderHeader={() => (<h2><Icon type="calendar" /> Agenda de la famille</h2>)}>
+      <List renderHeader={() => (<h2><Icon type="calendar"/> Agenda de la famille</h2>)}>
         {getEvent(parkours, users).map(event => (
-          <Item
-            arrow="horizontal"
-            multipleLine
-            onClick={() => {
-              history.push(
-                ROUTING_USERS +
-                  "/" +
-                  event.user.id +
-                  ROUTING_PARKOURS +
-                  "/" +
-                  event.parkourId
-              );
-            }}
-            key={event.id}
-          >
-            {moment(event.date).format("Do MMMM YYYY")}
-            <Brief>
-              {event.title} <br /> {event.user.lastName + " " + event.user.firstName}
-            </Brief>
-          </Item>
+          <a href="javascript:void(0)" onClick={() => {
+            history.push(
+              ROUTING_USERS +
+              "/" +
+              event.user.id +
+              ROUTING_PARKOURS +
+              "/" +
+              event.parkourId
+            );
+          }}>
+            <Item
+              arrow="horizontal"
+              multipleLine
+
+              key={event.id}
+            >
+              {moment(event.date).format("Do MMMM YYYY")}
+              <Brief>
+                {event.title} <br/> {event.user.lastName + " " + event.user.firstName}
+              </Brief>
+            </Item>
+          </a>
         ))}
       </List>
     </div>
