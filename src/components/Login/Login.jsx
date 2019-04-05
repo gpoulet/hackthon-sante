@@ -25,7 +25,7 @@ const Login = (props) => {
       <Flex.Item>
         <h1>Identification</h1>
       </Flex.Item>
-      <Flex.Item style={{ width: '80%'}}>
+      <Flex.Item style={{ width: '80%' }}>
         <List>
           <InputItem
             {...getFieldProps('username')}
@@ -48,6 +48,9 @@ const Login = (props) => {
             </div>
           </List.Item>
         </List>
+      </Flex.Item>
+      <Flex.Item style={{ display: 'flex' }}>
+        <img src="/assets/images/fc_logo_v2.png" style={{ width: '80%', margin: 'auto' }} />
       </Flex.Item>
     </Flex>
   );
