@@ -26,9 +26,17 @@ import Users from "./components/Users";
 import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
 import Parkours from "./components/Parkours";
+import DocumentDetail from "./components/Documents/DocumentDetail.js";
 import Timeline from "./components/Timeline";
 import ParkourAdd from "./components/Parkours/ParkourAdd.js";
-import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DOCUMENTS} from "./constants";
+import {
+  ROUTING_USERS,
+  ROUTING_AGENDA,
+  ROUTING_ADD,
+  ROUTING_PARKOURS,
+  ROUTING_DOCUMENTS,
+  ROUTING_DOCUMENT_DETAIL
+} from "./constants";
 
 import history from './history';
 import Login from "./components/Login/Login";
@@ -110,8 +118,9 @@ const App = () => {
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS } exact component={Parkours}/>
-              <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + "/:id" +ROUTING_DOCUMENT_DETAIL} exact component={DocumentDetail}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
               <Route path={ROUTING_USERS} component={Users}/>
               <Route path={ROUTING_AGENDA} exact component={Agenda}/>
               <Redirect from="/" to="/login"/>
