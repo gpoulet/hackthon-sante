@@ -11,10 +11,8 @@ function TimelinePage({ timeline, parkoursId }) {
     <div>
     <WingBlank size="lg">
       <WhiteSpace size="lg"/>
+      <h2><Icon type="branches"/>&nbsp;&nbsp;{title}</h2>
       <Card>
-        <Card.Header
-          title={title}
-        />
         <Card.Body>
           <Timeline>
             {events.map((event, index) => <TimelineItem parkoursId={parkoursId} key={index} {...event} />)}
