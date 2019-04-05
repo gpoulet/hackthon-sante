@@ -26,7 +26,8 @@
     "events": [
       { "id": "85a1875e-4159-4673-9fea-a25694c7be49", "title": "Contrôle Sage femme ou Médecin", "type": "SAGEFEMME", "date": "20190203" },
       { "id": "b7215283-61c5-40a3-bbc0-77ddf10ace9c", "title": "Réducation périnitale", "date": "20190203" },
-      { "id": "8bccfd8d-be63-4248-9f78-0c026967c905", "title": "Contrôle Sage femme ou gynéco", "type": "SAGEFEMME", "date": "20190211" }
+      { "id": "8bccfd8d-be63-4248-9f78-0c026967c905", "title": "Contrôle Sage femme ou gynéco", "type": "SAGEFEMME", "date": "20190211" },
+      { "id": "8bccfd8d-be63-4248-9f78-0c026967c905", "title": "Contrôle Sage femme ou gynéco 2", "type": "SAGEFEMME", "date": "20190511" }
     ]
   },
   {

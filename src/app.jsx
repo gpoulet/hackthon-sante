@@ -20,7 +20,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './store/';
 
-import Agenda from './components/Agenda/Agenda'
+import Agenda from './components/Agenda'
 import Users from "./components/Users";
 import UserAdd from "./components/Users/UserAdd.js";
 import Splash from "./components/Splash";
@@ -103,9 +103,9 @@ const App = () => {
             <Switch>
               <Route path="/login" exact component={Login}/>
               <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
-              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS} exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS } exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
               <Route path={ROUTING_USERS} component={Users}/>
