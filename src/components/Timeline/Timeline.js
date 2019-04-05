@@ -5,7 +5,8 @@ import { getParkoursByParkoursId } from "../../store/parkours"
 const mapStateToProps = (state, props) => {
   const parkoursId = props.match.params.parkoursId;
   return {
-    timeline: getParkoursByParkoursId(state, parkoursId)
+    timeline: getParkoursByParkoursId(state, parkoursId),
+    parkoursId
   }
 }
 

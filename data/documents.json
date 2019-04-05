@@ -1,7 +1,7 @@
 [{
   "id":"1a049b8c-c3d6-4218-b0d5-39af4cae1717",
   "name": "Radio du pied",
-  "file": "/assets/images/documents/radiologie-pied.png",
+  "file": "/assets/documents/radio-pied.jpg",
   "date": "22/01/2019",
   "eventId": "32e752d1-794b-4641-8acf-4e34a741762a",
   "userId": "3e728741-e4e7-4118-af06-f5ccc255b4be"
@@ -9,7 +9,7 @@
   {
   "id":"1a049b4c-c3d6-4218-b0d5-39af4cae1717",
   "name": "Scanner du thorax",
-  "file": "/assets/images/documents/scanner-thorax.png",
+  "file": "/assets/documents/scanner-thorax.jpg",
   "date": "22/01/2019",
   "eventId": "f0f4e102-28f2-4676-b7a3-e8189d7039c9",
   "userId":"14b861fb-2c41-4e37-a205-aa790f1a5701"

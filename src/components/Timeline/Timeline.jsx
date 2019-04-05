@@ -1,11 +1,10 @@
 import React from "react";
-import { object } from "prop-types";
+import { object, string } from "prop-types"
 import { Timeline } from 'antd';
 import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
-import { formatDDMMYYYY } from '../../util'
-import { getColorFromType } from '../../constants'
+import TimelineItem from './TimelineItem'
 
-function TimelinePage({ timeline }) {
+function TimelinePage({ timeline, parkoursId }) {
   const { title, events } = timeline;
   return (
     <WingBlank size="lg">
@@ -16,8 +15,7 @@ function TimelinePage({ timeline }) {
         />
         <Card.Body>
           <Timeline>
-            {events.map((event, index) => <Timeline.Item key={index}
-              color={getColorFromType(event.type, event.date)}>{formatDDMMYYYY(event.date)} : {event.title}</Timeline.Item>)}
+            {events.map((event, index) => <TimelineItem parkoursId={parkoursId} key={index} {...event} />)}
           </Timeline>
         </Card.Body>
       </Card>
@@ -25,7 +23,8 @@ function TimelinePage({ timeline }) {
 }
 
 TimelinePage.propTypes = {
-  timeline: object
+  timeline: object,
+  parkoursId: string
 }
 
 export default TimelinePage
