@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {func} from "prop-types";
 import {InputItem, DatePicker,List, ImagePicker} from "antd-mobile";
+import {Button} from "antd";
 import {createForm} from 'rc-form';
 import moment from "moment"
 import enUs from 'antd-mobile/lib/date-picker/locale/en_US';
@@ -11,6 +12,7 @@ function DocumentAdd({add,form}) {
     const [name, setName] = useState("");
     const [files, setFiles] = useState([]);
     const [date, setDate] = useState(new Date());
+
 
 
     const onClick=()=> {
@@ -48,12 +50,12 @@ function DocumentAdd({add,form}) {
                 multiple={false}
             />
             <List.Item>
-                <div
+                <Button
                     style={{width: '100%', color: '#108ee9', textAlign: 'center'}}
                     onClick={onClick}
                 >
                     Ajouter
-                </div>
+                </Button>
             </List.Item>
         </List>
     )

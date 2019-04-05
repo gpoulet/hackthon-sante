@@ -8,6 +8,8 @@ import React from "react";
                     <img src={document.file} className="Profile-image" alt="Profile image"/>
                 </div>
             </div>
+
+
         );
     }
 

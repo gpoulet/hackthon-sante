@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import DocumentAdd from "./DocumentAdd.jsx";
 import { addDocument } from "../../store/documents";
 import history from "../../history";
-import {ROUTING_USERS, ROUTING_DOCUMENTS} from "../../constants";
+import { ROUTING_DOCUMENTS} from "../../constants";
 
 
 const mapDispatchToProps = (dispatch) => {

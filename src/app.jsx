@@ -41,7 +41,7 @@ import {
 import history from './history';
 import Login from "./components/Login/Login";
 import Documents from "./components/Documents";
-import DocumentAdd from "./components/Documents/DocumentAdd";
+import DocumentAdd from "./components/Documents/DocumentAdd.js";
 import EventAdd from "./components/Event";
 
 
