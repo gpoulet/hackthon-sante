@@ -13,12 +13,12 @@ function User ({ id, firstName, lastName, dateNaissance, photo }) {
     return (
       <Flex direction="row" justify="end">
         <Link to={ROUTING_USERS + "/" + id + ROUTING_DOCUMENTS} style={{ paddingRight: '15px'}}>
-          <Button type="primary" ghost>
+          <Button>
             Documents
           </Button>
         </Link>
         <Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}>
-          <Button type="primary" ghost>Parcours</Button>
+          <Button type="primary">Parcours</Button>
         </Link>
       </Flex>
     );
