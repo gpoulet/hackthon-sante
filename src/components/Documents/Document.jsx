@@ -6,7 +6,7 @@ const Item = List.Item;
 
 function Document({document, userId}) {
     return (
-        <Link to={ROUTING_USERS + '/' + userId + ROUTING_DOCUMENTS + '/' + document.id}>
+        <Link to={ROUTING_USERS + '/' + userId + ROUTING_DOCUMENTS }>
 
             <Item arrow="horizontal" multipleLine onClick={() => {
             }}>

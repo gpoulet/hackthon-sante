@@ -8,7 +8,7 @@ import { ROUTING_ADD, ROUTING_DOCUMENTS, ROUTING_USERS } from "../../constants";
 function Documents({ documents, match }) {
     return (
         <List renderHeader={() => "document"} className="my-list">
-            <Link to={ROUTING_USERS + "/"+ match.params.userId + ROUTING_DOCUMENTS}>
+            <Link to={ROUTING_USERS + "/"+ match.params.userId + ROUTING_DOCUMENTS + ROUTING_ADD}>
                 <List.Item>
                     <Icon type="check-circle-o"/> Ajouter un Document
                 </List.Item>

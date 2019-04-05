@@ -51,11 +51,6 @@ const data = [
     label: 'Agenda',
     link: '/agenda'
   },
-  {
-    value: '4',
-    label: 'Document',
-    link: '/document'
-  },
 
 ];
 
