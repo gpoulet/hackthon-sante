@@ -34,6 +34,7 @@ import history from './history';
 import Login from "./components/Login/Login";
 import Documents from "./components/Documents";
 import DocumentAdd from "./components/Documents/DocumentAdd";
+import EventAdd from "./components/Event/EventAdd";
 
 
 // Note: this API requires redux@>=3.1.0
@@ -109,6 +110,7 @@ const App = () => {
               <Route path={ROUTING_USERS + ROUTING_ADD} exact component={UserAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + ROUTING_ADD} exact component={ParkourAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId"} exact component={Timeline}/>
+              <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS + "/:parkoursId" + "/add"} exact component={EventAdd}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_PARKOURS } exact component={Parkours}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS} exact component={Documents}/>
               <Route path={ROUTING_USERS + "/:userId" + ROUTING_DOCUMENTS + ROUTING_ADD} exact component={DocumentAdd}/>
