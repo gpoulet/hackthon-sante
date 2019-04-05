@@ -8,13 +8,13 @@
       { "id": "32e752d1-794b-4641-8acf-4e34a741762a", "title": "Déclaration rattachement à la Caisse d’Assurance Maladie", "date": "20190104" },
       { "id": "b10a1865-9bff-47d3-a9de-21ea42d5fb9e", "title": "Rendez-vous Examen 1 postnatale pédiatre ou sage-femme", "date": "20190111" },
       { "id": "a6ff58aa-8d05-4c74-bbc2-dc3fa43e53bb", "title": "Vaccins BCG", "date": "20190203", "type": "VACCIN" },
-      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Examen 2 pédiatre ou médecin + vaccins", "type": "VACCIN", "date": "20190203" },
-      { "id": "6b556f5e-c656-4b5f-bcaa-e9c3591a09ac", "title": "Rendez-vous Examen 3 pédiatre ou médecin", "date": "20190303" },
-      { "id": "a660290f-1ae9-4f2e-8936-13eb0353149c", "title": "Rendez-vous Examen 4 pédiatre ou médecin", "date": "20190403" },
-      { "id": "a660290f-1ae9-4f2e-8936-13eb0353s49c", "title": "Rendez-vous Radiologie", "date": "20190404",
+      { "id": "f0f4e102-28f2-4676-b7a3-e8189d7039c9", "title": "Examen 2 pédiatre ou médecin + vaccins", "type": "VACCIN", "date": "20190203",
         "documents": [
           { "id": "1a049b8c-c3d6-4218-b0d5-39af4cae1717"}
-        ] },
+        ]},
+      { "id": "6b556f5e-c656-4b5f-bcaa-e9c3591a09ac", "title": "Rendez-vous Examen 3 pédiatre ou médecin", "date": "20190303" },
+      { "id": "a660290f-1ae9-4f2e-8936-13eb0353149c", "title": "Rendez-vous Examen 4 pédiatre ou médecin", "date": "20190403" },
+      { "id": "a660290f-1ae9-4f2e-8936-13eb0353s49c", "title": "Rendez-vous Radiologie", "date": "20190404" },
       { "id": "defdd261-746a-459e-9316-68ca476702fc", "title": "Rendez-vous Examen 5 pédiatre ou médecin", "date": "20190503" },
       { "id": "97c30763-9943-4071-91e6-4f45cff3809c", "title": "Rendez-vous Examen 6 pédiatre ou médecin", "date": "20190603" }
     ]
