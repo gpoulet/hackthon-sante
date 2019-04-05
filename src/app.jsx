@@ -31,7 +31,7 @@ import {ROUTING_USERS, ROUTING_AGENDA, ROUTING_ADD, ROUTING_PARKOURS, ROUTING_DO
 
 import history from './history';
 import Login from "./components/Login/Login";
-import Documents from "./components/Documents/Documents";
+import Documents from "./components/Documents";
 import DocumentAdd from "./components/Documents/DocumentAdd";
 
 
