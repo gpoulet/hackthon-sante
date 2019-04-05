@@ -16,7 +16,7 @@ function TimelinePage({ timeline }) {
         />
         <Card.Body>
           <Timeline>
-            {events.map(event => <Timeline.Item
+            {events.map((event, index) => <Timeline.Item key={index}
               color={getColorFromType(event.type, event.date)}>{formatDDMMYYYY(event.date)} : {event.title}</Timeline.Item>)}
           </Timeline>
         </Card.Body>
