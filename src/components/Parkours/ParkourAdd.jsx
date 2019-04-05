@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { func } from "prop-types";
 import { List, InputItem } from "antd-mobile";
+import { Button } from "antd";
 import { createForm } from 'rc-form';
 
 function ParkourAdd({ add, match, form }) {
@@ -27,7 +28,7 @@ function ParkourAdd({ add, match, form }) {
         ref={setDescription}
       />
       <List.Item>
-        <button onClick={onClick}>Ajouter</button>
+        <Button type="primary" onClick={onClick}>Ajouter</Button>
       </List.Item>
     </List>
   );

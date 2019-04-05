@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
+import { Avatar, Button } from 'antd';
 
 import { Link } from 'react-router-dom';
 
@@ -11,13 +12,14 @@ function User ({ id, firstName, lastName, dateNaissance, photo }) {
       <Card>
         <WingBlank>
           <Card.Header title={firstName + " " + lastName}
-                       thumb="https://gw.alipayobjects.com/zos/rmsportal/MRhHctKOineMbKAZslML.jpg"
-                       extra={<Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}>Choisir</Link>}/>
-          <p>date naissance : {dateNaissance}</p>
-          <p>photo : {photo} </p>
+                       thumb={<div className="user-avatar"><Avatar size="large" icon="user"/></div>}
+                       extra={<Link to={ROUTING_USERS + "/" + id + ROUTING_PARKOURS}><Button type="primary" ghost>Parcours</Button></Link>}/>
+          <WingBlank>
+            <p>Date naissance : {dateNaissance}</p>
+          </WingBlank>
         </WingBlank>
       </Card>
-      <WhiteSpace size="lg" />
+      <WhiteSpace size="lg"/>
     </div>
   )
 }

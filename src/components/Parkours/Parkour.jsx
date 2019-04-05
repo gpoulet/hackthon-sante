@@ -8,11 +8,11 @@ const Item = List.Item;
 
 function Parkour ({ parkour, userId }) {
   return (
-    <Link to={ROUTING_USERS + '/' + userId + ROUTING_PARKOURS + '/' + parkour.id}>
-      <Item arrow="horizontal" multipleLine>
+    <Item arrow="horizontal" multipleLine>
+      <Link to={ROUTING_USERS + '/' + userId + ROUTING_PARKOURS + '/' + parkour.id}>
         {parkour.title}
-      </Item>
-    </Link>
+      </Link>
+    </Item>
   );
 }
 

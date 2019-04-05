@@ -8,10 +8,11 @@ import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import { WingBlank, NavBar, WhiteSpace, Icon, Drawer, List } from 'antd-mobile';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faIgloo, faMedkit } from '@fortawesome/free-solid-svg-icons'
+import { faIgloo, faMedkit, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faIgloo)
 library.add(faMedkit)
+library.add(faUserPlus)
 
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router'
 
