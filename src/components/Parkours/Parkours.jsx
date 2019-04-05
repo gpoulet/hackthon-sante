@@ -10,7 +10,7 @@ function Parkours({ parkours, match }) {
     <List renderHeader={() => "Parcours"} className="my-list">
       <Link to={ROUTING_USERS + "/"+ match.params.userId + ROUTING_PARKOURS + ROUTING_ADD}>
         <List.Item>
-          <Icon type="check-circle-o"/> Ajouter un parcour
+          <Icon type="check-circle-o"/> Ajouter un parcours
         </List.Item>
       </Link>
       {parkours.map(parkour => (
