@@ -5,7 +5,8 @@ import { Provider } from 'react-redux'
 
 import { Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
-import { WingBlank, NavBar, WhiteSpace, Icon, Drawer, List } from 'antd-mobile';
+import { WingBlank, NavBar, WhiteSpace, Drawer, List } from 'antd-mobile';
+import { Icon } from 'antd';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faIgloo, faMedkit, faUserPlus } from '@fortawesome/free-solid-svg-icons'
@@ -45,12 +46,14 @@ const data = [
   {
     value: '2',
     label: 'Famille',
-    link: '/users'
+    link: '/users',
+    icon: 'home'
   },
   {
     value: '3',
     label: 'Agenda',
-    link: '/agenda'
+    link: '/agenda',
+    icon: 'calendar'
   },
 
 ];
@@ -72,7 +75,7 @@ const App = () => {
     return data.map(
       (item, index) => {
         return <List.Item key={index}>
-          <Link to={item.link} onClick={() => setIsMenuVisible(!isMenuVisible)}>{item.label}</Link>
+          <Link to={item.link} onClick={() => setIsMenuVisible(!isMenuVisible)}><Icon type={item.icon} style={{color: '#222'}} />&nbsp;&nbsp;<span style={{color: '#222'}}>{item.label}</span></Link>
         </List.Item>
       }
     )
@@ -85,7 +88,7 @@ const App = () => {
       <ConnectedRouter history={history}>
         <Router history={history}>
           <NavBar className="top-nav-bar"
-                  icon={<Icon type="ellipsis" />}
+                  icon={<Icon type="ellipsis" style={{ cursor: 'pointer' }} />}
                   onLeftClick={(...args) => {
                     console.log(args);
                     setIsMenuVisible(!isMenuVisible);
@@ -97,6 +100,7 @@ const App = () => {
             sidebar={<Sidebar />}
             docked={isMenuVisible}
             open={isMenuVisible}
+
           > </Drawer>
           < WhiteSpace size="lg"/>
           <WingBlank>
