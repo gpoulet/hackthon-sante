@@ -4,8 +4,10 @@ import { Timeline } from 'antd';
 import { Card, WingBlank, WhiteSpace, Button } from 'antd-mobile';
 import { Icon } from "antd";
 import TimelineItem from './TimelineItem'
+import history from "../../history";
+import { ROUTING_PARKOURS, ROUTING_USERS } from "../../constants";
 
-function TimelinePage({ timeline, parkoursId }) {
+function TimelinePage({ timeline, parkoursId, userId }) {
   const { title, events } = timeline;
   return (
     <div>
@@ -21,13 +23,14 @@ function TimelinePage({ timeline, parkoursId }) {
       </Card>
     </WingBlank>
       <br/>
-      <Button type="primary"><Icon type="plus" />&nbsp;&nbsp;Ajouter</Button>
+      <Button type="primary" onClick={() => history.push(history.push(ROUTING_USERS+"/"+userId + ROUTING_PARKOURS + "/" + parkoursId + "/add"))}><Icon type="plus" />&nbsp;&nbsp;Ajouter</Button>
     </div>);
 }
 
 TimelinePage.propTypes = {
   timeline: object,
-  parkoursId: string
+  parkoursId: string,
+  userId: string,
 }
 
 export default TimelinePage
