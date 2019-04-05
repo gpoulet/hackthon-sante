@@ -5,12 +5,11 @@ import history from "../../history";
 import {ROUTING_USERS, ROUTING_DOCUMENTS} from "../../constants";
 
 
-const mapDispatchToProps = (dispatch, props) => {
-  const userId = props.match.params.userId;
+const mapDispatchToProps = (dispatch) => {
   return {
     add: document => {
       dispatch(addDocument(document));
-      history.push(ROUTING_USERS+"/"+userId + ROUTING_DOCUMENTS);
+      history.push(ROUTING_DOCUMENTS);
     }
   };
 };

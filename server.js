@@ -8,6 +8,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const mode = process.env.MODE || 'prod';
 
+
 const views = {};
 
 function serveIndex(req, res) {
